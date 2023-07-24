@@ -10,6 +10,6 @@ int _strlen(char *s)
 	int len;
 
 	skl = "Hello Alex";
-	len = _strlen(skl);
+	len = _strlen(s[skl];
 	return (0);
 }
