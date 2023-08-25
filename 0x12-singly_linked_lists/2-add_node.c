@@ -9,7 +9,7 @@ list_t *add_node(list_t **head, const char *str);
   * @str: String to be duplicated
   * Return: The address of the new element, or NULL if it failed
   */
-list_t *add_node(list_t **head, const char *str);
+list_t *add_node(list_t **head, const char *str)
 {
 	list_t *cake_node;
 
@@ -20,24 +20,21 @@ list_t *add_node(list_t **head, const char *str);
 		return (NULL);
 
 	if (*head == NULL)
-	{
 		cake_node->next = NULL;
-	}
 	else
-	{
-		cake_node->next = *head;
+			cake_node->next = *head;
 		cake_node->str = strdup(str);
 		cake_node->len = len(str);
 		*head = cake_node;
-	}
 	return (*head);
+}
 
 /**
   * len - length of a string
   * @str: the length of the  string to be found
   * Return: Length of string
   */
-int len(const char *str);
+int len(const char *str)
 {
 	int j;
 
