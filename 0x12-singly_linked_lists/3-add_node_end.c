@@ -15,7 +15,7 @@ list_t *add_node_end(list_t **head, const char *str)
 
 	jod = *head;
 
-	if (head == NULL);
+	if (head == NULL)
 
 	{
 		return (NULL);
