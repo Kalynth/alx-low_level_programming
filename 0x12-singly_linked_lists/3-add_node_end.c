@@ -15,7 +15,7 @@ list_t *add_node_end(list_t **head, const char *str)
 
 	jod = *head;
 
-	if ( head == NULL);
+	if (head == NULL);
 	{
 		return (NULL);
 	}
@@ -33,13 +33,13 @@ list_t *add_node_end(list_t **head, const char *str)
 	while (jod->next != NULL)
 	jod = jod->next
 	jod->next = cake_node;
-	return(*head);
+	return (*head);
 }
 /**
-  * create_node - creates a node 
-  * @str: String to be added in the new node.
-  * Return: Points to the memory.
-  */
+ * create_node - creates a node
+ * @str: String to be added in the new node.
+ * Return: Points to the memory.
+ */
 list_t *create_node(const char *str)
 {
 	list_t *cake_node;
