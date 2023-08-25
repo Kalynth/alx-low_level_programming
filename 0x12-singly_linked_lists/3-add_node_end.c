@@ -1,7 +1,6 @@
 #include "lists.h"
-
-
 int len(const char *str);
+list_t *create_node(const char *str);
 /**
   * add_node_end - adds nodes to the end of list
   * @head: Points to the first node
@@ -10,29 +9,24 @@ int len(const char *str);
   */
 list_t *add_node_end(list_t **head, const char *str)
 {
-	list_t *cake_node;
 	list_t *jod;
+	list_t *cake_node;
 
 	jod = *head;
 
 	if (head == NULL)
-
-	{
-		return (NULL);
-	}
-	cake_node = create_nod(str);
-
-	if (cake_nod == NULL)
+		cake_node = create_node(str);
+	if (cake_node == NULL)
 	{
 		return (NULL);
 	}
 	if (*head == NULL)
 	{
-		*head = cake_nod;
+		*head = cake_node;
 		return (*head);
 	}
 	while (jod->next != NULL)
-	jod = jod->next
+		jod = jod->next;
 	jod->next = cake_node;
 	return (*head);
 }
@@ -52,13 +46,14 @@ list_t *create_node(const char *str)
 	cake_node->str = strdup(str);
 	cake_node->len = len(str);
 	cake_node->next = NULL;
+	return (cake_node);
 }
 /**
  * len - Length of a string
  * @str: the length of the  string to be found
  * Return: Length of string
  */
-int len(const char *str);
+int len(const char *str)
 {
 	int j;
 
