@@ -5,8 +5,6 @@
 #include<stdlib.h>
 #include<string.h>
 
-size_t print_list(const list_t *h);
-
 /**
  * struct list_s - singly linked list
  * @str: string - (malloc'ed string)
