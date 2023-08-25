@@ -16,6 +16,7 @@ list_t *add_node_end(list_t **head, const char *str)
 	jod = *head;
 
 	if (head == NULL);
+
 	{
 		return (NULL);
 	}
@@ -43,6 +44,7 @@ list_t *add_node_end(list_t **head, const char *str)
 list_t *create_node(const char *str)
 {
 	list_t *cake_node;
+
 	cake_node = malloc(sizeof(list_t));
 	if (cake_node == NULL)
 		return (NULL);
@@ -52,10 +54,10 @@ list_t *create_node(const char *str)
 	cake_node->next = NULL;
 }
 /**
-  * len - length of a string
-  * @str: the length of the  string to be found
-  * Return: Length of string 
-  */
+ * len - Length of a string
+ * @str: the length of the  string to be found
+ * Return: Length of string
+ */
 int len(const char *str);
 {
 	int j;
