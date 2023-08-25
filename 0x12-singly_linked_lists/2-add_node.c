@@ -35,7 +35,7 @@ list_t *add_node(list_t **head, const char *str);
 /**
   * len - length of a string
   * @str: the length of the  string to be found
-  * Return: Length of string 
+  * Return: Length of string
   */
 int len(const char *str);
 {
