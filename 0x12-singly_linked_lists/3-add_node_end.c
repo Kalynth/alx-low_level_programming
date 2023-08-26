@@ -15,7 +15,9 @@ list_t *add_node_end(list_t **head, const char *str)
 	jod = *head;
 
 	if (head == NULL)
-		cake_node = create_node(str);
+		return (NULL);
+
+	cake_node = create_node(str);
 	if (cake_node == NULL)
 	{
 		return (NULL);
