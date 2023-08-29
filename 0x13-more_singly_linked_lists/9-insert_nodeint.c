@@ -1,64 +1,44 @@
 #include "lists.h"
- /**
-  * Create_new_node - Creates a node
-  * @n: Contains data for the node
-  * Return: The pointer to the node
-  */
-listint_t *create_new_node(int n)
-{
-	listint_t *new;
-
-	new  = malloc(sizeof(listint_t));
-	if (new == NULL)
-		return (NULL);
-	new->n = n;
-	new->next = NULL;
-
-	return (new);
-}
 /**
-  * insert_nodeint_at_index - Inserts a node in an index
-  * @head: Acts as a pointer
-  * @idx: index
-  * @n: data of the node
-  * Return: The address of the node
-  */
+ * insert_nodeint_at_index - inserts a new node in a linked list,
+ * at a given position
+ * @head: pointer to the first node in the list
+ * @idx: index where the new node is added
+ * @n: data to insert in the new node
+ *
+ * Return: pointer to the new node, or NULL
+ */
 listint_t *insert_nodeint_at_index(listint_t **head, unsigned int idx, int n)
 {
 	unsigned int j;
-	listint_t *temp;
 	listint_t *jod;
-	listint_t *cake;
+	listint_t *temp = *head;
 
-	temp = *head;
-	if (head == NULL)
+	jod = malloc(sizeof(listint_t));
+	if (!jod || !head)
 		return (NULL);
-	cake = create_new_node(n);
-	if (cake == NULL)
-		return (NULL);
-	if (*head == NULL)
-	{
-		*head = cake;
-		return (cake);
-	}
+
+	jod->n = n;
+	jod->next = NULL;
 
 	if (idx == 0)
 	{
-		cake->next = *head;
-		*head = cake;
-		return (cake);
+		jod->next = *head;
+		*head = jod;
+		return (jod);
 	}
-	for (j = 0; j < idx - 1 && temp != NULL && idx != 0; j++)
-		temp = temp->next;
-	if (temp == NULL)
-		return (NULL);
-	if (idx == 0)
-		cake->next = temp;
-	else
+
+	for (j = 0; temp && j < idx; j++)
 	{
-		jod = temp->next;
-		temp->next = cake;
-		cake->next = jod;
+		if (j == idx - 1)
+		{
+			jod->next = temp->next;
+			temp->next = jod;
+			return (jod);
+		}
+		else
+			temp = temp->next;
 	}
-	return (cake);
+
+	return (NULL);
 }
