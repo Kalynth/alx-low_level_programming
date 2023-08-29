@@ -1,7 +1,7 @@
 #include "lists.h"
  /**
   * Create_new_node - Creates a node
-  * @n: Contains data for the nod
+  * @n: Contains data for the node
   * Return: The pointer to the node
   */
 listint_t *create_new_node(int n)
