@@ -43,8 +43,11 @@ listint_t *insert_nodeint_at_index(listint_t **head, unsigned int idx, int n)
 	}
 
 	if (idx == 0)
+	{
+		cake->next = *head;
 		*head = cake;
-
+		return (cake);
+	}
 	for (j = 0; j < idx - 1 && temp != NULL && idx != 0; j++)
 		temp = temp->next;
 	if (temp == NULL)
