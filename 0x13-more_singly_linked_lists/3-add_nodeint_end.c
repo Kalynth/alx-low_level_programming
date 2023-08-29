@@ -2,6 +2,7 @@
 /**
   * add_nodeint_end - Adds a node to the end of the list
   * #n: Integer
+  * @head: Acts a pointer to the list
   * Return: ddress of the new element, or NULL if it failed
   */
 listint_t *add_nodeint_end(listint_t **head, const int n)
