@@ -14,7 +14,7 @@ int delete_nodeint_at_index(listint_t **head, unsigned int index)
 	jode = *head;
 	if (head == NULL || *head == NULL)
 		return (-1);
-	for (j = 0; j < index - 1 && jode != 0; j++)
+	for (j = 0; j < index - 1 && jode != NULL && index != 0; j++)
 		jode = jode->next;
 	if (jode == NULL)
 		return (-1);
