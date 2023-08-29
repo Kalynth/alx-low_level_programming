@@ -33,14 +33,14 @@ int _strlen(char *s)
 {
 	int z = 0;
 
-	while (s[z] != NULL)
+	while (s[z] != '\0')
 	{
-		Z++;
+		z++;
 	}
 	return (z);
 }
 /**
- * errors - handles errors for main
+ * error - handles main error
  */
 void error(void)
 {
