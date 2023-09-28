@@ -22,7 +22,7 @@ int _sqrt_recursion(int n)
  * @z: iterator
  * Return: the resulting square root
  */
-int actual_sqrt_recursion(int n, int i)
+int actual_sqrt_recursion(int n, int z)
 {
 	if (z * z > n)
 		return (-1);
