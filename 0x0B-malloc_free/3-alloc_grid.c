@@ -35,8 +35,8 @@ int **alloc_grid(int width, int height)
 
 	for (k = 0; k < height; k++)
 	{
-		for (y = 0; y < width; y++)
-			jod[k][y] = 0;
+		for (x = 0; x < width; x++)
+			jod[k][x] = 0;
 	}
 
 	return (jod);
