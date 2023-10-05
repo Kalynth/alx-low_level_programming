@@ -2,7 +2,7 @@
 #include "main.h"
 
 /**
- * *string_nconcat - concatenates n bytes of a string to another string
+ * string_nconcat - concatenates n bytes of a string to another string
  * @s1: string to append to
  * @s2: string to concatenate from
  * @n: number of bytes from s2 to concatenate to s1
@@ -33,7 +33,7 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 		k++;
 	}
 
-	while (n < len2 && i < (len1 + n))
+	while (n < len2 && z < (len1 + n))
 		s[k++] = s2[z++];
 
 	while (n >= len2 && k < (len1 + len2))
