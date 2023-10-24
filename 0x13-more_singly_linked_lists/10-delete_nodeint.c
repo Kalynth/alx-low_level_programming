@@ -26,8 +26,8 @@ int delete_nodeint_at_index(listint_t **head, unsigned int index)
 	}
 	else
 	{
-		if (jode->next == NULL)
-			kode = jode->next;
+		if (jode->next != NULL)
+			kode = jode->next->next;
 		else
 			kode = jode->next;
 		free(jode->next);
