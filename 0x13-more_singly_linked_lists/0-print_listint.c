@@ -1,6 +1,7 @@
 #include "lists.h"
 /**
  * print_listint - Prints all elements of a list
+ *
  * @h: Acts a pointer to the list
  * Return: number of nodes
  */
