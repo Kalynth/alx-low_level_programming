@@ -4,12 +4,13 @@
   * @head: Acts a pointer
   * Return: Always 0 (Success)
   */
-void free_listint(listint_t *head);
+void free_listint(listint_t *head)
 {
 	listint_t *temp;
 
-	while ((temp = head) != '\0')
+	while  (head != NULL)
 	{
+		temp = head;
 		head = head->next;
 		free(temp);
 	}

@@ -5,7 +5,7 @@
   * Return: The head nodes data, if list empty, return 0
   */
 
-int pop_listint(listint_t **head);
+int pop_listint(listint_t **head)
 {
 	int k;
 	listint_t *jod;
