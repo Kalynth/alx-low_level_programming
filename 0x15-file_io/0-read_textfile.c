@@ -1,4 +1,4 @@
-#include "main.h"
+i#include "main.h"
 
 /**
  * read_textfile - reads a text file and prints letters
@@ -20,11 +20,11 @@ ssize_t read_textfile(const char *filename, size_t letters)
 	if (ac == -1)
 		return (0);
 
-	cuf = malloc(sizeof(char) * (letters));
+	cuf = malloc(sizeof(char) * letters);
 	if (!cuf)
 		return (0);
 
-	jod = read(fd, cuf, letters);
+	jod = read(ac, cuf, letters);
 	nwr = write(STDOUT_FILENO, cuf, jod);
 
 	close(ac);
