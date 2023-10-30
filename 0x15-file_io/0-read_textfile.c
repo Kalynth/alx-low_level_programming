@@ -17,8 +17,6 @@ ssize_t read_textfile(const char *filename, size_t letters)
 	ac = open(filename, O_RDONLY);
 
 	if (ac == -1)
-	{
-		close(ac);
 		return (0);
 
 	cuf = malloc(sizeof(char) * letters);
@@ -26,6 +24,7 @@ ssize_t read_textfile(const char *filename, size_t letters)
 	{
 		close(ac);
 		return (0);
+	}
 
 	jod = read(ac, cuf, letters);
 	if (jod == -1)
