@@ -1,5 +1,4 @@
-i#include "main.h"
-
+#include "main.h"
 /**
  * read_textfile - reads a text file and prints letters
  * @filename: filename
