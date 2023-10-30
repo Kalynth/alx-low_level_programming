@@ -18,18 +18,30 @@ ssize_t read_textfile(const char *filename, size_t letters)
 	ac = open(filename, O_RDONLY);
 
 	if (ac == -1)
+	{
+		close(ac);
 		return (0);
 
 	cuf = malloc(sizeof(char) * letters);
 	if (!cuf)
+	{
+		close(ac);
 		return (0);
 
 	jod = read(ac, cuf, letters);
+	if (jod == -1)
+	{
+		close(ac);
+		free(cuf);
+		return (0);
+	}
 	nwr = write(STDOUT_FILENO, cuf, jod);
 
 	close(ac);
-
 	free(cuf);
 
-	return (nwr);
+	if (nwr == -1)
+		return (0);
+
+	return (jod);
 }
