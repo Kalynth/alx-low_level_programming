@@ -1,10 +1,10 @@
 /**
- * divi - divides two integers
+ * div - divides two integers
  * @a - First integer
  * @b - Second integer
  * Return: divisiom
  */
-int divi(int a, int b)
+int div(int a, int b)
 {
 	return (a / b);
 }
