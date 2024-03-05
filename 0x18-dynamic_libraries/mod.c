@@ -2,7 +2,7 @@
  * mod - adds two integers
  * @a - First integer
  * @b - Second integer
- * Return: modulo or remainder
+ * Return: remainder
  */
 int mod(int a, int b)
 {
