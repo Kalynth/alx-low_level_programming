@@ -1,4 +1,3 @@
-#include<stdlib.h>
 /**
  * divi - divides two integers
  * @a - First integer

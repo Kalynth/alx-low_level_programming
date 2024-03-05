@@ -1,5 +1,3 @@
-#include<stdlib.h>
-#include<stdio.h>
 /**
  * mod - adds two integers
  * @a - First integer

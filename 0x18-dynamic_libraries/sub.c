@@ -1,5 +1,3 @@
-#include<stdlib.h>
-#include<stdio.h>
 /**
  * sub - subtracts two integers
  * @a - First integer
