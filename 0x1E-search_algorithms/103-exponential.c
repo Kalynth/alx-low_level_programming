@@ -2,7 +2,7 @@
 
 
 /**
- * binary_search - searches for a value in a sorted array of integers
+ * _binary_search - searches for a value in a sorted array of integers
  * using the binary search algorithim
  * @array: array of integers
  * @left: Left element
@@ -11,7 +11,7 @@
  * Return: index of value or -1 if not found
  */
 
-int binary_search(int *array, size_t left, size_t right, int value)
+int _binary_search(int *array, size_t left, size_t right, int value)
 {
 
 	size_t i;
